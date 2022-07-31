@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+<style>
+div.static {
+  position: static;
+  border: 0px solid #2b0d5c;
+}
+div.c {
+  text-align: center;
+}
+.center {
+  margin: auto;
+  width: 1000px;
+  border: 0px solid #2b0d5c;
+  padding: 10px;
+}
+.center2 {
+  margin: auto;
+  width: 1000px;
+  border: 0px solid #2b0d5c;
+  padding: 10px;
+}
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+}
+p {text-align: center;}
+l {text-align: left;}
+r {text-align: right;}
+</style>
+</head>
+
+
+<body onload="scene1()">
+  <h1><p style="font-family:Helvetica;color: red;">NYC AirBnB Property Price Analysis</p></h1>
+  
+	<div class="center">
+		<p style="font-family:Helvetica;">
+		Since 2008, guests and hosts have used Airbnb to expand on traveling possibilities and present a more unique, personalized way of experiencing the world. Today, Airbnb became one of a kind service that is used and recognized by the whole world. Data analysis on millions of listings provided through Airbnb is a crucial factor for the company. These millions of listings generate a lot of data - data that can be analyzed and used for security, business decisions, understanding of customers’ and providers’ (hosts) behavior and performance on the platform, guiding marketing initiatives, implementation of innovative additional services and much more		
+	</div>
+ 
+	<div id="div1" style="display: none">
+		<div>
+			<div class="center2"><p style="font-family:Helvetica;">  
+			The barplot provides details on popular neighbourhoods in NYC. 
+			</br><br><button onClick="scene2();">Next</button>
+			</p>
+			</div>
+		</div>
+		<div class="center">
+			<h3><p style="font-family:Helvetica;">NYC AirBnB Available Properties vs Neighbourhood</p></h3>
+			<div id="scene_dataviz"></div>
+		</div>	
+	</div>
+  
+	<div id="div2" style="display: none">
+		<div class="center2">
+				<p style="font-family:Helvetica;">  
+				The below chart provides details on AirBnB rental price distribution in NYC. The average rental price is 164$.
+				</br><br><button onClick="scene1();">Previous </button>
+				<button onClick="scene3();">Next </button>
+				</p>
+		</div>
+		<div class="center">
+			<h3><p style="font-family:Helvetica;">Rental Price Distribution</p></h3>
+			<div id="scene_dataviz2"></div>
+		</div>	
+	</div>
+
+	<div id="div3" style="display: none">
+		<div>
+			<div class="center2"><p style="font-family:Helvetica;">  
+				The scatter plot below provides details on the number of reviews compared with the rental price per night.
+				</br><br><button onClick="scene2();">Previous </button>
+				</p>
+			</div>
+		</div>
+		<div class="center">
+			<h3><p style="font-family:Helvetica;">NYC AirBnB Property Price relative to Number of Reviews</p></h3>
+			<div id="scene_dataviz3"></div>
+		</div>
+	</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ 
+</div>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>
